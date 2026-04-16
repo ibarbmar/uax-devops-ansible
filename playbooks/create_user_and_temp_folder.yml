@@ -6,7 +6,7 @@
   #  vars: 
   #  user_name: modi
   vars_files:
-      - /home/ansadmin/playbooks/user.yml
+      - /var/lib/jenkins/playbooks/user.yml
 
   tasks:
   - name: creating user {{ user_name }}
@@ -15,7 +15,7 @@
   
   - name: creating a folder owned by {{ user_name }}
     file: 
-      path: /opt/{{ user_name}}_temp_dir
+      path: /home/jenkins/playbooks/{{ user_name}}_temp_dir
       state: directory
       owner: "{{ user_name }}"
       group: "{{user_name}}"

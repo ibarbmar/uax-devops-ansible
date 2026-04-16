@@ -5,17 +5,17 @@
   gather_facts: no
 
   tasks: 
-  - name: create a floder 
+  - name: create a folder
     file: 
-      path: /home/ansadmin/other-test-directory
+      path: /home/jenkins/playbooks/test-directory
       state: directory
       mode: 0755
-      owner: ansadmin
-      group: ansadmin
+      owner: jenkins
+      group: jenkins
   - name: create a file into the recently created folder
     file: 
-      path: /home/ansadmin/other-test-directory/testfile.txt
+      path: /home/jenkins/playbooks/test-directory/testfile.txt
       state: touch
       mode: 0755
-      owner: ansadmin 
-      group: ansadmin
+      owner: jenkins
+      group: jenkins
